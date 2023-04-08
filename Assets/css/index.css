@@ -1,0 +1,390 @@
+/* Global styles */
+
+/* Set default font family and size */
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  background-color: rgba(38,139,146,1);
+}
+
+html {
+  scroll-behavior: smooth; /* Hace que el desplazamiento entre secciones sea suave */
+}
+
+/* Secciones */
+
+section {
+  height: 100vh; /* Establece la altura de cada sección al 100% del viewport height */
+  scroll-snap-align: start; /* Hace que cada sección se ajuste al inicio de la ventana de visualización cuando se desplaza */
+  padding: 20px;
+}
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up grid layout */
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+}
+
+/* Header styles */
+
+header {
+  grid-column: 1 / -1;
+  background-color: azure;
+  padding: 20px 20px 0;
+}
+
+.logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Navigation styles */
+
+nav {
+    position: fixed; /* Hace que la navegación esté fija en la parte superior de la ventana de visualización */
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* Establece un fondo blanco para la navegación */
+    z-index: 1; /* Hace que la navegación esté en la capa superior para que se muestre encima del contenido */
+  }
+
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #f7f7f7; /* Cambia el fondo del enlace cuando se pasa el cursor sobre él */
+}
+
+nav ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Hace que los elementos de la lista se muestren en una fila horizontal */
+  justify-content: space-around; /* Distribuye los elementos de la lista con un espacio uniforme */
+  align-items: center; /* Alinea verticalmente los elementos de la lista en el centro */
+  height: 80px; /* Establece la altura de la navegación */
+
+}
+
+nav ul li a {
+  color: #1a1a1a;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  padding: 10px;
+}
+
+.Inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.text-container {
+  flex-basis: 50%;
+}
+
+.imagen-container {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagenPaul {
+  max-width: 50%;
+}
+
+.text h1 {
+  margin-bottom: 10px;
+}
+
+.text span {
+  font-size: 20px;
+}
+
+
+/* Hero section styles */
+
+.hero {
+  grid-column: 1 / -1;
+  background-image: url(../images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px #1a1a1a;
+}
+
+/* About section styles */
+
+.about {
+  grid-column: 1 / -1;
+  padding: 50px 0;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Skills section styles */
+
+.skills {
+  grid-column: 1 / -1;
+  padding: 50px 0;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skill {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.skill p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+* Contact section styles */ .contact {
+  grid-column: 1 / -1;
+  padding: 50px 0;
+  background-color: #1a1a1a;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-form input,
+.contact-form textarea {
+  flex-basis: calc(50% - 10px);
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #fff;
+}
+
+.contact-form input[type="submit"] {
+  flex-basis: 100%;
+  background-color: #fff;
+  color: #1a1a1a;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form input[type="submit"]:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+/* Footer styles */
+
+footer {
+  grid-column: 1 / -1;
+  background-color: rgb(20, 36, 36);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.footer-links li {
+  margin-right: 10px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.footer-links li a:hover {
+  color: #8c8c8c;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer-social li {
+  margin-right: 10px;
+}
+
+.footer-social li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.footer-social li a:hover {
+  color: #8c8c8c;
+  transform: scale(1.1);
+}
+
+.footer-text {
+  font-size: 0.8rem;
+}
+
+/* Media queries */
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .hero {
+    height: 300px;
+  }
+
+  .about,
+  .skills,
+  .contact {
+    padding: 20px 0;
+  }
+
+  .about h2,
+  .skills h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .skill {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.about h2,
+.skills h2,
+.contact h2,
+.skill {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+section:not(:last-child) {
+  margin-bottom: 20px;
+}
