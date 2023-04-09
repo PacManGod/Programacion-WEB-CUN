@@ -28,6 +28,11 @@ nav a {
   padding: 10px;
   transition: all 0.3s ease;
   border: transparent 3px solid;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 
 nav a:hover {
@@ -62,8 +67,8 @@ nav ul li a:hover {
 
 /*Divide la seccion en dos columnas*/
 .Inicio {
-  height: 110vh;
-  margin-top: 11vh;
+  height: 111vh;
+  margin-top: 10vh;
   display: grid;
   align-items: center;
   background-color: #9EDED8;
@@ -75,10 +80,13 @@ nav ul li a:hover {
 
 .Inicio > :nth-child(2n + 1) {
   background-color: #9EDED8;
+  margin: 40px;
 }
 
 .Inicio > :nth-child(2n) {
   background-color: #268B92;
+  margin: 40px;
+  border-radius: 50px;
 }
 
 .Inicio .text-container{
@@ -90,29 +98,35 @@ nav ul li a:hover {
 
 .Inicio .text-container h1 {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 700px;
   margin-bottom: 20px;
+  letter-spacing: 1px;
 }
 
 .Inicio .text-container p {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 400px;
   margin-bottom: 20px;
 }
 
-.Inicio .imagen-container {
+.Inicio .imagen-container{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 110vh;
+  height: calc(100vh - 111px);
   padding: 20px;
-  
+}
+
+.Inicio .imagen-container .imagenPaul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .Inicio .imagen-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  margin: auto;
+  max-width: 60%;
+  max-height: 100%;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -120,8 +134,36 @@ nav ul li a:hover {
   -o-border-radius: 50px;
 }
 
+.Contenido{
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  background-color: #EBEBEB;
+  color: #2ea8e0;
 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
 
+.Contenido .Texto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.Contenido .Texto h1 {
+  font-size: 3rem;
+  font-weight: 700px;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+}
+
+.Contenido .Texto p {
+  font-size: 1rem;
+  font-weight: 400px;
+  margin-bottom: 20px;
+}
 
 footer {
   grid-column: 1 / -1;

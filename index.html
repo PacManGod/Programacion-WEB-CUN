@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,78 +19,128 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#quien-soy">Quién Soy</a></li>
-          <li><a href="#a-que-me-dedico">A Qué Me Dedico</a></li>
-          <li><a href="#estudios">Estudios</a></li>
-          <li><a href="#cursos">Cursos</a></li>
-          <li><a href="#informacion">Información</a></li>
-          <li><a href="#experiencia">Experiencia</a></li>
+          <li><a href="#quien-soy" data-scroll="quien-soy">Quién Soy</a></li>
+          <li>
+            <a href="#a-que-me-dedico" data-scroll="a-que-me-dedico"
+              >A Qué Me Dedico</a
+            >
+          </li>
+          <li><a href="#estudios" data-scroll="estudios">Estudios</a></li>
+          <li><a href="#cursos" data-scroll="cursos">Cursos</a></li>
+          <li>
+            <a href="#informacion" data-scroll="informacion">Información</a>
+          </li>
+          <li>
+            <a href="#experiencia" data-scroll="experiencia">Experiencia</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="Inicio">
+      <section id="quien-soy" class="Inicio">
         <div class="text-container">
           <div class="text">
-            <h1>Quién Soy</h1>
+            <h1>¿Quién Soy?</h1>
+            <p>Me llamo Paul Anthony Moreno Manrique.</p>
             <p>
-              Me llamo Paul Anthony Moreno Manrique, me considero una persona
-              responsable y dedicada con la capacidad de adaptarme a la
-              situación con el fin de lograr los objetivos planteados.
+              Soy Estudiante de ingeniería de sistemas en la Corporación
+              Unificada de Educación Superior, CUN.
             </p>
             <p>
-              Soy
-              Estudiante de ingeniería de sistemas en la Corporación Unificada
-              de Educación Superior, CUN, Anteriormente partícipe en una
-              convocatoria del gobierno llamado Misión Tic donde me eduque en
-              aplicaciones web con la universidad Sergio Arboleda, tengo un alto
-              interés en las tecnologías, en búsqueda de la mejora constante.
+              Anteriormente partícipe en una convocatoria del gobierno llamado
+              Misión Tic donde me eduque en aplicaciones web con la universidad
+              Sergio Arboleda.
+            </p>
+            <p>
+              Tengo un alto interés en las tecnologías, en búsqueda de la mejora
+              constante.
             </p>
           </div>
         </div>
         <div class="imagen-container">
           <div class="imagenPaul">
-            <img src="Assets/img/Paul.jpg" alt="Foto" width="100%" />
+            <img src="Assets/img/Paul.jpg" alt="Foto" />
           </div>
         </div>
       </section>
 
-      <section>
-        <h1>A Qué Me Dedico</h1>
-        <p>
-          Aquí va información sobre tu trabajo, proyectos, habilidades, etc.
-        </p>
+      <section id="a-que-me-dedico" class="Contenido">
+        <div class="Texto-Contenido">
+          <div class="Texto">
+            <h1>A Qué Me Dedico</h1>
+            <p>
+              Aquí va información sobre trabajo, proyectos, habilidades, etc.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h1>Estudios</h1>
-        <p>Aquí va información sobre tus estudios y formación académica.</p>
+      <section id="estudios" class="Contenido">
+        <div class="Texto-Contenido">
+          <div class="Texto">
+            <h1>Estudios</h1>
+            <p>Aquí va información sobre estudios y formación académica.</p>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h1>Cursos</h1>
-        <p>
-          Aquí va información sobre los cursos que has tomado y certificaciones
-          obtenidas.
-        </p>
+      <section id="cursos" class="Contenido">
+        <div class="Texto-Contenido">
+          <div class="Texto">
+            <h1>Cursos</h1>
+            <p>
+              Aquí va información sobre los cursos que has tomado y
+              certificaciones obtenidas.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h1>Información</h1>
-        <p>
-          Aquí va información adicional que quieras compartir, como tus
-          habilidades blandas, intereses personales, etc.
-        </p>
+      <section id="informacion" class="Contenido">
+        <div class="Texto-Contenido">
+          <div class="Texto">
+            <h1>Información</h1>
+            <p>
+              Aquí va información adicional que quieras compartir, como tus
+              habilidades blandas, intereses personales, etc.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section>
-        <h1>Experiencia</h1>
-        <p>Aquí va información sobre tu experiencia laboral previa.</p>
+      <section id="experiencia" class="Contenido">
+        <div class="Texto-Contenido">
+          <div class="Texto">
+            <h1>Experiencia</h1>
+            <p>Aquí va información sobre experiencia laboral.</p>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
       <p>Derechos Reservados &copy; 2023 Paul Anthony Moreno Manrique</p>
     </footer>
     <!-- AQUI VA el enlace a un archivo de scripts personalizados -->
+    <script>
+      // Obtener todos los enlaces de navegación
+      const links = document.querySelectorAll("nav a[data-scroll]");
+
+      // Agregar un listener de eventos click a cada enlace
+      links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          // Prevenir el comportamiento predeterminado del enlace
+          event.preventDefault();
+
+          // Obtener la sección correspondiente
+          const sectionId = link.getAttribute("data-scroll");
+          const section = document.getElementById(sectionId);
+
+          // Desplazar suavemente la página hasta la sección correspondiente
+          section.scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
   </body>
 </html>
