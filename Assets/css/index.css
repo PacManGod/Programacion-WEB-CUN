@@ -33,7 +33,14 @@
   font-size: 3rem;
   font-weight: 700px;
   margin-bottom: 20px;
-  letter-spacing: 1px;
+  letter-spacing: 50px;
+}
+
+.Inicio .text-container h2 {
+  letter-spacing: 30px;
+  text-decoration-line: underline overline;
+  text-decoration-color: #2d6883;
+  margin-bottom: 5%;
 }
 
 .Inicio .text-container p {
