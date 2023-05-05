@@ -1,11 +1,5 @@
-body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
-  background-color: #1d1d23;
-}
-
 .inicioproyectos {
-  height: 111.5vh;
+  height: 100vh;
   margin-top: 10px;
   border-radius: 30px;
   -webkit-border-radius: 30px;
@@ -15,11 +9,10 @@ body {
 }
 
 .inicioProyectosTitulo {
-  margin-top: 11.5vh;
   display: grid;
   align-items: center;
   background-color: #9eded8;
-  height: 111.5vh;
+  height: 100vh;
   border-radius: 30px;
   justify-content: center;
   -webkit-border-radius: 30px;
@@ -40,7 +33,7 @@ body {
 .inicioProyectosContenido {
   color: #08403f;
   background-color: #ecd8cf;
-  height: 111.5vh;
+  height: 100vh;
   padding: 50px;
 }
 

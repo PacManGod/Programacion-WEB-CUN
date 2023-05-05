@@ -1,7 +1,6 @@
 /*Divide la seccion en dos columnas*/
 .Inicio {
-  height: 111vh;
-  margin-top: 10vh;
+  height: 100vh; /* 100% del viewport height */
   display: grid;
   align-items: center;
   background-color: #9eded8;
@@ -105,87 +104,138 @@
   margin-bottom: 20px;
 }
 
-.card {
-  width: 190px;
-  height: 254px;
-  background: white;
-  border-radius: 10px;
-  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.ContenidoInfo {
+  height: 50vh;
+  background-color: #9eded8;
+  color: #268b92;
+  padding: 0 50px;
 }
 
-.shadow {
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
-}
-
-.carta {
-  width: 210px;
-  height: 254px;
-  border-radius: 4px;
-  background: #9eded8;
+.ContenidoInfo .LineaDivi {
   display: flex;
-  gap: 5px;
-  padding: 0.4em;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  border: 5px solid #268b92;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
-.carta p {
-  height: 100%;
-  flex: 1;
+.ContenidoInfo .certificados {
+}
+
+.ContenidoInfo .Texto h1 {
+  padding: 50px 0 0 0;
+  font-size: 3.999rem;
+}
+
+.ContenidoInfo .Texto p {
+  font-size: 1rem;
+  padding: 0 10px 0 100px;
+}
+
+.ContenidoEnd {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.border {
+  height: 369px;
+  width: 290px;
+  opacity: 0;
+  background: transparent;
+  border-radius: 10px;
+  transition: border 1s;
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  -webkit-transition: border 1s;
+  -moz-transition: border 1s;
+  -ms-transition: border 1s;
+  -o-transition: border 1s;
+}
+.border:hover {
+  border: 10px solid #f5f5f7;
+  opacity: 1;
+  z-index: 1;
+  transition: border 1.5s;
+  -webkit-transition: border 1.5s;
+  -moz-transition: border 1.5s;
+  -ms-transition: border 1.5s;
+  -o-transition: border 1.5s;
+}
+
+.card {
+  height: 379px;
+  width: 300px;
+  background: #808080;
+  border-radius: 10px;
+  transition: background 0.8s;
+  color: #f5f5f7;
   overflow: hidden;
-  cursor: pointer;
-  border-radius: 2px;
-  transition: all 0.5s;
-  background: #9eded8;
-  border: 1px solid #268b92;
+  background: #f5f5f7;
+  box-shadow: 0 70px 63px -60px #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.carta p:hover {
-  flex: 4;
+.cardMe {
+  background: url("../img/IMG_20221005_081424.jpg") center center no-repeat;
+  background-size: 300px;
+}
+.cardMe:hover {
+  background: url("../img/IMG_20221005_081424.jpg") left center no-repeat;
+  background-size: 600px;
+}
+.cardMe:hover h3 {
+  opacity: 1;
+  color: #f5f5f7;
+}
+.cardMe2 {
+  background: url("../img/Yo.jpg") center center no-repeat;
+  background-size: 300px;
+}
+.cardMe2:hover {
+  background: url("../img/Yo.jpg") left center no-repeat;
+  background-size: 600px;
+}
+.cardMe2:hover h3 {
+  opacity: 1;
+  color: #212121;
 }
 
-.carta p span {
-  min-width: 14em;
-  padding: 0.5em;
-  text-align: center;
-  transform: rotate(-90deg);
-  transition: all 0.5s;
-  text-transform: uppercase;
-  color: #268b92;
-  letter-spacing: 0.1em;
+h3 {
+  color: #f5f5f7;
+  margin: 20px;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.carta p:hover span {
-  transform: rotate(0);
+.icons {
+  position: absolute;
+  fill: #fff;
+  color: #fff;
+  height: 130px;
+  top: 180px;
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
 
-/* Media queries */
-
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(6, 1);
-    margin: black 5px solid;
-  }
-}
-/* Animations */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-    -webkit-transform: translateY(50px);
-    -moz-transform: translateY(50px);
-    -ms-transform: translateY(50px);
-    -o-transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
-  }
+.icons:hover {
+  color: #f5f5f7 !important;
+  z-index: 1;
+  transition: fill 1s;
 }
