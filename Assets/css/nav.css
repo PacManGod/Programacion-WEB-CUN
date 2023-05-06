@@ -97,9 +97,6 @@
   position: relative;
   outline: none;
   text-decoration: none;
-
-  justify-content: center;
-  align-items: center;
   text-transform: uppercase;
   border: 1px solid #f5f5f7;
   border-radius: 10px;
@@ -127,11 +124,6 @@
 
 .header .btn button:hover {
   animation: rotate624 0.7s ease-in-out both;
-}
-
-.header .btn button:hover span {
-  animation: storm1261 0.7s ease-in-out both;
-  animation-delay: 0.06s;
 }
 
 @keyframes rotate624 {
