@@ -1,13 +1,28 @@
 /*Divide la seccion en dos columnas*/
 .Inicio {
-  height: 100vh; /* 100% del viewport height */
+  height: 100vh;
+  /*100%delviewportheight*/
   display: grid;
   align-items: center;
   background-color: #9eded8;
   color: #2d6883;
-
+  opacity: 0;
+  /*Iniciaconopacidadcero*/
+  transform: translateY(50px);
+  /*Desplazamientohaciaabajo*/
+  transition: opacity 1s ease, transform 1s ease;
+  /*Transicionesdeentrada*/
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  -webkit-transition: opacity 1s ease, transform 1s ease;
+  -moz-transition: opacity 1s ease, transform 1s ease;
+  -ms-transition: opacity 1s ease, transform 1s ease;
+  -o-transition: opacity 1s ease, transform 1s ease;
+}
+
+.Inicio.mostrar {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .Inicio > :nth-child(2n + 1) {
@@ -102,6 +117,61 @@
   font-size: 1rem;
   font-weight: 400px;
   margin-bottom: 20px;
+}
+
+.ContenidoIntro {
+  height: 50vh;
+  background-color: #1b676d;
+  color: #9eded8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden; /*agregamos un overflow hidden para que la animación no se desborde*/
+}
+
+.ContenidoIntro .texto {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: bold;
+  opacity: 0; /*inicialmente lo ponemos oculto*/
+  transition: opacity 0.5s ease;
+}
+
+.ContenidoIntro .titulo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  font-weight: bold;
+  opacity: 1;
+  /*inicialmenteloponemosoculto*/
+  transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+}
+
+.ContenidoIntro:hover .texto {
+  opacity: 1; /*cuando se hace hover en el ContenidoIntro hacemos visible el título*/
+}
+
+.ContenidoIntro:hover .titulo {
+  opacity: 0; /*cuando se hace hover en el ContenidoIntro hacemos visible el título*/
+}
+
+@media only screen and (max-width: 768px) {
+  .ContenidoIntro {
+    height: auto;
+    padding: 50px;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 .ContenidoInfo {
@@ -220,6 +290,10 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  -webkit-transition: background 0.8s;
+  -moz-transition: background 0.8s;
+  -ms-transition: background 0.8s;
+  -o-transition: background 0.8s;
 }
 
 .cardMe {
@@ -252,6 +326,10 @@ h3 {
   margin: 20px;
   opacity: 0;
   transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
 }
 
 .icons {
@@ -271,4 +349,8 @@ h3 {
   color: #f5f5f7 !important;
   z-index: 1;
   transition: fill 1s;
+  -webkit-transition: fill 1s;
+  -moz-transition: fill 1s;
+  -ms-transition: fill 1s;
+  -o-transition: fill 1s;
 }
