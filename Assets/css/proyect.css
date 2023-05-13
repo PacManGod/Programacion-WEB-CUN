@@ -1,3 +1,62 @@
+@import "https://fonts.googleapis.com/css?family=Baloo+Paaji";
+.container {
+  height: 100vh;
+  font-family: "Baloo Paaji", cursive;
+  background: #1e90ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 220px;
+  position: relative;
+}
+
+.container h1,
+h2 {
+  font-size: 75px;
+  text-transform: uppercase;
+}
+.containerh1 span,
+h2 span {
+  width: 100%;
+  float: left;
+  color: #ffffff;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  transform: translateY(-50px);
+  opacity: 0;
+  animation-name: titleAnimation;
+  animation-timing-function: ease;
+  animation-duration: 3s;
+}
+.container h1 span {
+  animation-delay: 0.6s;
+}
+
+.container h1 span:first-child {
+  animation-delay: 0.7s;
+}
+.container h1 span:last-child {
+  color: #ffe221;
+  animation-delay: 0.5s;
+}
+
+.container h2 {
+  top: 0;
+  position: absolute;
+}
+.container h2 span {
+  animation-delay: 4.1s;
+  -webkit-animation-fill-mode: forwards;
+}
+.container h2 span:first-child {
+  animation-delay: 4.2s;
+}
+.container h2 span:last-child {
+  color: #ffe221;
+  animation-delay: 4s;
+}
+
 .inicioproyectos {
   height: 100vh;
   margin-top: 10px;
@@ -61,4 +120,31 @@
   justify-content: center;
   align-items: center;
   height: 600px;
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+  }
+  20% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  100% {
+    transform: translateY(50px);
+    opacity: 0;
+    -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+    clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+  }
 }
